@@ -28,7 +28,7 @@ function saveGame(){
   if(currentGame){
     $.post('/games', {state: state})
   } else {
-    $.patch('/games', {state: state})
+    $.patch('/games/' + currentGame, {state: state})
   }
 }
 
