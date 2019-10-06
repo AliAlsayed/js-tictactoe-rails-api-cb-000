@@ -31,6 +31,7 @@ function saveGame(){
       url: '/games/' + currentGame,
       data: {state: state}
     });
+    console.log('haha')
   } else {
     $.post('/games', {state: state})
   }
