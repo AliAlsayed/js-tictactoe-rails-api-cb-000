@@ -155,6 +155,7 @@ function attachListeners(){
       $.get('/games/' + id, function(data){
         var state = data["data"]["attributes"]["state"]
         var id = data["data"]["id"]
+        currentGame = id;
         populateBoard(state)
       })
     })
