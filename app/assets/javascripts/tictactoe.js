@@ -25,7 +25,12 @@ function getBoard(){
 
 function saveGame(){
   var state = getBoard();
-  var posting = $.post('/games', {state: state})
+  if(currentGame){
+    $.post('/games', {state: state})
+  } else {
+    $.patch('/games', {state: state})
+  }
+  var posting = 
 }
 
 function checkWinner(){
