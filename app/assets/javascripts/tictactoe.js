@@ -130,6 +130,7 @@ function attachListeners(){
     });
 
     $("#clear").click(function(){
+      currentGame = null
       var board = document.getElementsByTagName("td");
       for(var i = 0; i < board.length; i++){
         $(board[i]).empty();
