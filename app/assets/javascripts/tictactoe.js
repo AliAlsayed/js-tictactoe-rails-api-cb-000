@@ -26,9 +26,9 @@ function getBoard(){
 function saveGame(){
   var state = getBoard();
   if(currentGame){
-    $.post('/games', {state: state})
-  } else {
     $.patch('/games/' + currentGame, {state: state})
+  } else {
+    $.post('/games', {state: state})
   }
 }
 
