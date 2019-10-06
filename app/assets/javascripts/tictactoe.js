@@ -30,7 +30,7 @@ function saveGame(){
       type: 'PATCH',
       url: '/games/' + currentGame
       data: {state: state}
-    })
+    });
   } else {
     $.post('/games', {state: state})
   }
