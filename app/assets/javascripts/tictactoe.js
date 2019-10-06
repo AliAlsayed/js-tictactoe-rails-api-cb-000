@@ -30,7 +30,6 @@ function saveGame(){
   } else {
     $.patch('/games', {state: state})
   }
-  var posting =
 }
 
 function checkWinner(){
