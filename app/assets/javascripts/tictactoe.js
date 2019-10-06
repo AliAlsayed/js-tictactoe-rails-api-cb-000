@@ -26,11 +26,11 @@ function getBoard(){
 function saveGame(){
   var state = getBoard();
   if(currentGame){
-    $.ajax(
+    $.ajax({
       type: 'PATCH',
       url: '/games/' + currentGame
       data: {state: state}
-    )(, )
+    })
   } else {
     $.post('/games', {state: state})
   }
